@@ -16,7 +16,7 @@ public class CoinController {
     }
 
     @PostMapping("/calculate")
-    public List<Double> calculateMinimumCoins(@RequestParam double targetAmount, @RequestParam List<Double> coinDenominations) {
+    public List<String> calculateMinimumCoins(@RequestParam double targetAmount, @RequestParam List<Double> coinDenominations) {
         return coinService.calculateMinimumCoins(targetAmount, coinDenominations);
     }
 }

@@ -9,7 +9,7 @@ import java.util.List;
 @Service
 public class CoinService {
 
-    public List<Double> calculateMinimumCoins(double targetAmount, List<Double> coinDenominations) {
+    public List<String> calculateMinimumCoins(double targetAmount, List<Double> coinDenominations) {
         List<Double> result = new ArrayList<>();
         Collections.sort(coinDenominations, Collections.reverseOrder());
 
@@ -21,6 +21,18 @@ public class CoinService {
         }
 
         Collections.sort(result);
-        return result;
+
+        List<String> formattedResult = new ArrayList<>();
+        for (double coin : result) {
+            if (coin == (long) coin) {
+                formattedResult.add(String.format("%d", (long) coin));
+            } else if (coin * 10 == (long) (coin * 10)) {
+                formattedResult.add(String.format("%.1f", coin));
+            } else {
+                formattedResult.add(String.format("%.2f", coin));
+            }
+        }
+
+        return formattedResult;
     }
 }
