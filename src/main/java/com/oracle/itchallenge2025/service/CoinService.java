@@ -20,6 +20,7 @@ public class CoinService {
             }
         }
 
+        Collections.sort(result);
         return result;
     }
 }
