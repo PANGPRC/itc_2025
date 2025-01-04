@@ -7,6 +7,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/coins")
+@CrossOrigin(origins = "http://localhost:3000") // This allows requests from the frontend
 public class CoinController {
 
     private final CoinService coinService;
