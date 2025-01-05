@@ -1,7 +1,14 @@
-# itc_2025
+# itc_backend
 
 ## Challenge 1
 Just run the application and the test via IDE.
+```bash  
+mvn clean install
+```
+
+```bash  
+java -jar .\target\itc_2025-1.0-SNAPSHOT.jar
+```
 
 4 Jan - Tried to use Dropwizard, but it was not working as expected, so I used Spring Boot instead.
 
