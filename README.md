@@ -7,7 +7,7 @@ mvn clean install
 ```
 
 ```bash  
-java -jar .\target\itc_2025-1.0-SNAPSHOT.jar
+java -jar ./target/itc_2025-1.0-SNAPSHOT.jar
 ```
 
 4 Jan - Tried to use Dropwizard, but it was not working as expected, so I used Spring Boot instead.
@@ -29,4 +29,16 @@ Verify that the REST endpoints are responding as expected.
     http://localhost:8080/api/coins/calculate?targetAmount=7.3&coinDenominations=0.01,0.5,1,5,10
     // Remote Test
     http://3.0.18.101:8080/api/coins/calculate?targetAmount=7.3&coinDenominations=0.01,0.5,1,5,10
+```
+## Challenge 3
+Access to the AWS instance to start the backend application.
+```bash
+ssh -i "Austin.pem" ubuntu@ec2-3-0-18-101.ap-southeast-1.compute.amazonaws.com
+```
+```bash
+java -jar ITC/backend/itc_2025-1.0-SNAPSHOT.jar
+```
+If you want to access to the frontend application, please use the following URL:
+```bash
+http://3.0.18.101
 ```
