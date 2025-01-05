@@ -26,4 +26,10 @@ public class CoinServiceTest {
 
         assertEquals(expected, result);
     }
+
+    // Test the service with the following requests:
+    // Local Test
+    // http://localhost:8080/api/coins/calculate?targetAmount=7.3&coinDenominations=0.01,0.5,1,5,10
+    // Remote Test
+    // http://3.0.18.101:8080/api/coins/calculate?targetAmount=7.3&coinDenominations=0.01,0.5,1,5,10
 }
