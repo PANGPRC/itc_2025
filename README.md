@@ -35,9 +35,16 @@ Access to the AWS instance to start the backend application.
 ```bash
 ssh -i "Austin.pem" ubuntu@ec2-3-0-18-101.ap-southeast-1.compute.amazonaws.com
 ```
+
 ```bash
 java -jar ITC/backend/itc_2025-1.0-SNAPSHOT.jar
 ```
+
+If you want to make the backend application running once the terminal is closed, you can use the following command:
+```bash
+nohup java -jar ITC/backend/itc_2025-1.0-SNAPSHOT.jar &
+```
+
 If you want to access to the frontend application, please use the following URL:
 ```bash
 http://3.0.18.101
